@@ -1,95 +1,33 @@
+import Container from "@/components/ui/container";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import placeholderImage from "@/assets/images/placeholder.webp";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Box as="section" pb={[10, null, null, 40]}>
+      <Container textAlign="center">
+        <Flex justify="center">
+          <Box w="120px" h="120px" pos="relative">
+            <Image src={placeholderImage} alt="Chimy Praise" fill className="rounded" />
+          </Box>
+        </Flex>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Heading as="h1" fontSize={["2xl", null, null, "4xl"]} maxW={["100%", null, null, "50%"]} mx="auto" mb={3} lineHeight={1.5}>
+          Kickstart, Grow, and Thrive in Your Tutoring Business! <br /> No Experience Needed!
+        </Heading>
+
+        {/* use different color */}
+        <Heading as="h2" fontSize={["xl", null, null, "3xl"]} maxW={["100%", null, null, "50%"]} mx="auto" mb={16} lineHeight={1.5}>
+          Earn Weekly in Dollars!
+        </Heading>
+
+        <Text fontSize={["md", null, null, "xl"]}>
+          Hi, I’m Chimy Praise! 🎉 I help aspiring tutors like YOU land tutoring gigs, grow your skills, and scale your career to new heights. <br />
+          I share the exact strategies that got me international remote teaching jobs with companies as well as my own private students and a perfect interview streak (okay, almost perfect—back when I was figuring it all out 😉). <br />
+          I lost my 9-to-5 job where I was earning 150k naira per month ($97.7/month) to an online teaching job paying over a million naira a month—let’s make that your story too! 🚀
+        </Text>
+      </Container>
+    </Box>
   );
 }
