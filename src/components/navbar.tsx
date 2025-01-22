@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Logo from "./logo";
 import Sidebar from "./sidebar";
 import Container from "./ui/container";
+import { routes } from "@/routes";
 
 function Navbar() {
   const router = useRouter();
@@ -16,28 +17,16 @@ function Navbar() {
         <Logo />
 
         <HStack display={["none", null, null, "flex"]}>
-          <Button
-            color="#02FFE4"
-            px={5}
-            variant="outline"
-            onClick={() => router.push("/")}
-          >
-            Home
-          </Button>
-          <Button
-            color="#ffffff"
-            variant="outline"
-            onClick={() => router.push("/our-services")}
-          >
-            Our services
-          </Button>
-          <Button
-            bg="#02FFE4"
-            variant="solid"
-            onClick={() => router.push("/contact-us")}
-          >
-            Contact us
-          </Button>
+          {routes.map((route, i) => (
+            <Button
+              key={i}
+              bg="#02FFE4"
+              variant="solid"
+              onClick={() => router.push(route.path)}
+            >
+              {route.name}
+            </Button>
+          ))}
         </HStack>
 
         <Box display={["block", null, null, "none"]}>

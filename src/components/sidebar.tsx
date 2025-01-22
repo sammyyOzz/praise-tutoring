@@ -1,7 +1,7 @@
 import {
-  DrawerCloseTrigger,
   DrawerBackdrop,
   DrawerBody,
+  DrawerCloseTrigger,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
@@ -14,6 +14,7 @@ import HamburgerMenuIcon from "./icons/hamburger-menu";
 import Socials from "./socials";
 import Logo from "./logo";
 import Link from "next/link";
+import { routes } from "@/routes";
 
 function Sidebar() {
   return (
@@ -30,33 +31,21 @@ function Sidebar() {
             <Logo />
           </DrawerTitle>
         </DrawerHeader>
-        <DrawerBody>
+        <DrawerBody color="#ffffff">
           <Flex direction="column" align="flex-end" gap={10} pt={40}>
-            <DrawerCloseTrigger pos="static">
-              <Link href="/">
-                <Text as="span" fontSize="lg" fontWeight="bold">
-                  Home
-                </Text>
-              </Link>
-            </DrawerCloseTrigger>
-            <DrawerCloseTrigger pos="static">
-              <Link href="/our-services">
-                <Text as="span" fontSize="lg" fontWeight="bold">
-                  Our services
-                </Text>
-              </Link>
-            </DrawerCloseTrigger>
-            <DrawerCloseTrigger pos="static">
-              <Link href="/contact-us">
-                <Text as="span" fontSize="lg" fontWeight="bold">
-                  Contact us
-                </Text>
-              </Link>
-            </DrawerCloseTrigger>
+            {routes.map((route, i) => (
+              <DrawerCloseTrigger key={i} pos="static">
+                <Link href={route.path}>
+                  <Text as="span" fontSize="lg" fontWeight="bold">
+                    {route.name}
+                  </Text>
+                </Link>
+              </DrawerCloseTrigger>
+            ))}
           </Flex>
         </DrawerBody>
         <DrawerFooter>
-          <Socials />
+          <Socials color="#ffffff" w="30px" />
         </DrawerFooter>
       </DrawerContent>
     </DrawerRoot>

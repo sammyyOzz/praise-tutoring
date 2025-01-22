@@ -1,7 +1,7 @@
 import Container from "@/components/ui/container";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import placeholderImage from "@/assets/images/placeholder.webp";
+import placeholderImage from "@/assets/images/placeholder.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ListItem from "@/components/ui/list-item";

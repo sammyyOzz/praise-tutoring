@@ -3,6 +3,7 @@ import Logo from "./logo";
 import Link from "next/link";
 import Socials from "./socials";
 import Container from "./ui/container";
+import { routes } from "@/routes";
 
 function Footer() {
   return (
@@ -24,17 +25,11 @@ function Footer() {
             align="flex-end"
             gap={7}
           >
-            <Link href="/">
-              <Text as="span">Home</Text>
-            </Link>
-            {/* <Box as="br" /> */}
-            <Link href="/our-services">
-              <Text as="span">Our services</Text>
-            </Link>
-            {/* <Box as="br" /> */}
-            <Link href="/contact-us">
-              <Text as="span">Contact us</Text>
-            </Link>
+            {routes.map((route, i) => (
+              <Link key={i} href={route.path}>
+                <Text as="span">{route.name}</Text>
+              </Link>
+            ))}
           </Flex>
         </Flex>
       </Container>
