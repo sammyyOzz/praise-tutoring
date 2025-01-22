@@ -5,6 +5,7 @@ import placeholderImage from "@/assets/images/placeholder.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ListItem from "@/components/ui/list-item";
+import ImageSlider from "@/components/image-slider";
 
 const whatYouWillLearnList = [
   "Introduction to Online tutoring.",
@@ -175,6 +176,13 @@ export default function Home() {
             <br />
             Explore success stories from tutors we&apos;ve trained.
           </Heading>
+
+          <Box>
+            <ImageSlider images={Array(5).fill(placeholderImage)} />
+          </Box>
+          <Box>
+            <ImageSlider images={Array(5).fill(placeholderImage)} rtl />
+          </Box>
 
           <Heading
             as="h2"
