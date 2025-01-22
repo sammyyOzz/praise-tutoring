@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Box as="section" pb={[10, null, null, 20]}>
         <Container textAlign="center">
-          <Flex justify="center">
+          {/* <Flex justify="center">
             <Box w="120px" h="120px" pos="relative">
               <Image
                 src={placeholderImage}
@@ -28,7 +28,7 @@ export default function Home() {
                 style={{ border: "2px solid #F7DC6F"}}
               />
             </Box>
-          </Flex>
+          </Flex> */}
 
           <Heading
             as="h1"
