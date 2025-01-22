@@ -25,6 +25,7 @@ export default function Home() {
                 alt="Chimy Praise"
                 fill
                 className="rounded"
+                style={{ border: "2px solid #F7DC6F"}}
               />
             </Box>
           </Flex>
@@ -70,7 +71,6 @@ export default function Home() {
             <Button
               as={Box}
               variant="solid"
-              bg="black"
               color="#ffffff"
               fontSize="lg"
               fontWeight="bold"
@@ -204,7 +204,6 @@ export default function Home() {
             <Button
               as={Box}
               variant="solid"
-              bg="black"
               color="#ffffff"
               fontSize="lg"
               fontWeight="bold"
@@ -227,7 +226,6 @@ export default function Home() {
             <Button
               as={Box}
               variant="solid"
-              bg="black"
               color="#ffffff"
               fontSize="lg"
               fontWeight="bold"

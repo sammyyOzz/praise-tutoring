@@ -1,14 +1,11 @@
 import { Box, HStack, Text } from "@chakra-ui/react";
 
-function Logo() {
+function Logo({ ...props }) {
   return (
-    <HStack>
+    <HStack {...props}>
       <Box bg="#ffffff" w="50px" h="50px" border="1px solid black" />
-      <Text textTransform="uppercase" fontWeight="black" color="#02FFE4" fontSize={["md", null, null, "xl"]}>
+      <Text textTransform="uppercase" fontWeight="black" color={props?.color || "#85c1e9"} fontSize={["md", null, null, "xl"]}>
         prouda tutors
-        {/* <Text as="span" color="#02FFE4">
-          logo{" "}
-        </Text> */}
       </Text>
     </HStack>
   );

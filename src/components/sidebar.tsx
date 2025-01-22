@@ -21,14 +21,14 @@ function Sidebar() {
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <IconButton variant="outline">
-          <HamburgerMenuIcon />
+        <IconButton variant="outline" _hover={{ bg: "#85C1E9" }}>
+          <HamburgerMenuIcon color="#1A5276" />
         </IconButton>
       </DrawerTrigger>
-      <DrawerContent p={7}>
+      <DrawerContent p={7} bg="#1A5276">
         <DrawerHeader>
           <DrawerTitle>
-            <Logo />
+            <Logo color="#ffffff" />
           </DrawerTitle>
         </DrawerHeader>
         <DrawerBody color="#ffffff">

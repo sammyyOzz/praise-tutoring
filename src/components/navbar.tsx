@@ -20,7 +20,8 @@ function Navbar() {
           {routes.map((route, i) => (
             <Button
               key={i}
-              bg="#02FFE4"
+              w="130px"
+              fontWeight="bold"
               variant="solid"
               onClick={() => router.push(route.path)}
             >
