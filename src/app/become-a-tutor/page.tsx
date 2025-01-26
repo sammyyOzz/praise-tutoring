@@ -1,5 +1,6 @@
+import InfoCard from "@/components/info-card";
 import Container from "@/components/ui/container";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 
 const trainingProgramDetails = [
@@ -98,11 +99,17 @@ function BecomeATutor() {
 
           <Container
             textAlign="center"
-            maxW="600px"
+            // maxW="600px"
+            // border="1px solid red"
             p={0}
             fontSize={["md", null, null, "xl"]}
           >
-            {trainingProgramDetails.map((item, i) => (
+            <SimpleGrid columns={[1, null, 2, null, 3]} gap={8}>
+              {trainingProgramDetails.map((item, i) => (
+                <InfoCard key={i} title={item.title} details={item.details} />
+              ))}
+            </SimpleGrid>
+            {/* {trainingProgramDetails.map((item, i) => (
               <Box key={i} mb={8}>
                 <Flex mb={2}>
                   <Text w="25px">{i + 1}.</Text>
@@ -125,7 +132,7 @@ function BecomeATutor() {
                   </Flex>
                 ))}
               </Box>
-            ))}
+            ))} */}
           </Container>
         </Container>
       </Box>
