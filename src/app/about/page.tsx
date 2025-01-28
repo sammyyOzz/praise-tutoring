@@ -4,6 +4,10 @@ import ListItem from "@/components/ui/list-item";
 import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import placeholderImage from "@/assets/images/placeholder.png";
+import FileHistoryIcon from "@/components/icons/file-history";
+import GlobeIcon from "@/components/icons/globe";
+import PresentationIcon from "@/components/icons/presentation";
+import QuestionaireIcon from "@/components/icons/questionnaire";
 
 const tutorTrainingProgram = [
   {
@@ -164,24 +168,28 @@ function About() {
               details={[
                 "We focus not just on technical skills but also on soft skills, cultural sensitivity, and classroom management to make you a well-rounded educator.",
               ]}
+              icon={<PresentationIcon w="80px" color="skyblue" />}
             />
             <InfoCard
               title="Global Reach"
               details={[
                 "Our international network ensures that you’ll find opportunities to teach and connect with students across the world.",
               ]}
+              icon={<GlobeIcon w="80px" color="skyblue" />}
             />
             <InfoCard
               title="End-to-End Support"
               details={[
                 "From training to placement, we’re with you every step of the way, ensuring your success as a tutor.",
               ]}
+              icon={<QuestionaireIcon w="80px" color="skyblue" />}
             />
             <InfoCard
               title="Proven Track Record"
               details={[
                 "Our alumni have gone on to secure positions at top online schools, making a difference in the lives of their students.",
               ]}
+              icon={<FileHistoryIcon w="80px" color="skyblue" />}
             />
           </SimpleGrid>
 

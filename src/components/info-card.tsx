@@ -1,6 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React, { JSX } from "react";
-import YoutubeIcon from "./icons/youtube";
 
 interface InfoCardProps {
   title: string;
@@ -8,10 +7,10 @@ interface InfoCardProps {
   icon?: JSX.Element;
 }
 
-function InfoCard({ title, details, }: InfoCardProps) {
+function InfoCard({ title, details, icon }: InfoCardProps) {
   return (
     <Box>
-      <YoutubeIcon w="80px" /><br />
+      {icon}<br />
       <Text as="strong">{title}</Text>
       {details.map((detail, j) => (
         <Flex key={j} align="flex-start" mb={2}>

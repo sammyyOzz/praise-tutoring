@@ -9,7 +9,7 @@ interface FaqCardProps {
 
 function FaqCard({ question, answer }: FaqCardProps) {
   return (
-    <Flex textAlign="left" gap={4} fontSize="lg">
+    <Flex textAlign="left" gap={4}>
       <Box>
         <Square>
           <QuestionIcon width="35px" />

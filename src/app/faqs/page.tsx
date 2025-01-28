@@ -53,7 +53,7 @@ const faqList = [
 function Faqs() {
   return (
     <>
-      <Box as="section" pb={[10, null, null, 20]}>
+      <Box as="section" pb={[10, null, null, 20]} fontSize="lg">
         <Container textAlign="center">
           <Heading
             as="h1"

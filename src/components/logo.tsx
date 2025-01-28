@@ -1,13 +1,28 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Flex, HStack } from "@chakra-ui/react";
+import proudaLogo from "@/assets/icons/prouda-no-bg.png";
+import Image from "next/image";
+import Link from "next/link";
 
 function Logo({ ...props }) {
   return (
-    <HStack {...props}>
-      <Box bg="#ffffff" w="50px" h="50px" border="1px solid black" />
-      <Text textTransform="uppercase" fontWeight="black" color={props?.color || "#85c1e9"} fontSize={["md", null, null, "xl"]}>
-        prouda tutors
-      </Text>
+    <Link href="/">
+      <HStack {...props}>
+      <Flex
+        justify="center"
+        align="center"
+        pos="relative"
+        w="70px"
+        h="70px"
+        css={{
+          "& > img": {
+            transform: "scale(2.4)",
+          },
+        }}
+      >
+        <Image src={proudaLogo} alt="logo" fill />
+      </Flex>
     </HStack>
+    </Link>
   );
 }
 

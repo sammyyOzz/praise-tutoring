@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <Container>
-      <Flex justify="space-between" py={7}>
+      <Flex justify="space-between" align="center" py={7}>
         <Logo />
 
         <HStack display={["none", null, null, "flex"]}>
