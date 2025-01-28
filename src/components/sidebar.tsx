@@ -25,7 +25,7 @@ function Sidebar() {
           <HamburgerMenuIcon color="#1A5276" />
         </IconButton>
       </DrawerTrigger>
-      <DrawerContent p={7} bg="#1A5276">
+      <DrawerContent p={7} bg=" #1A5276">
         <DrawerHeader>
           <DrawerTitle>
             <Logo color="#ffffff" />

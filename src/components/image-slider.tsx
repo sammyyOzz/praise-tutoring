@@ -2,14 +2,15 @@
 
 import Slider from "react-slick";
 import { Box } from "@chakra-ui/react";
-import Image, { StaticImageData } from "next/image";
+// import Image, { StaticImageData } from "next/image";
 
 interface ImageSliderProps {
-  images: StaticImageData[];
+  // images: StaticImageData[];
   rtl?: boolean;
+  children: React.ReactNode;
 }
 
-function ImageSlider({ images, rtl }: ImageSliderProps) {
+function ImageSlider({ children, rtl }: ImageSliderProps) {
   const settings = {
     dots: false,
     infinite: true,
@@ -51,7 +52,8 @@ function ImageSlider({ images, rtl }: ImageSliderProps) {
   return (
     <Box w="full" px={{ base: 4, md: 8, xl: 16 }} py={{ base: 6, md: 10 }}>
       <Slider {...settings}>
-        {images
+        {children}
+        {/* {images
           .map((image, i) => (
             <Box key={i} display="flex" justifyContent="center">
               <Box 
@@ -66,7 +68,7 @@ function ImageSlider({ images, rtl }: ImageSliderProps) {
                 />
               </Box>
             </Box>
-          ))}
+          ))} */}
       </Slider>
     </Box>
   );

@@ -43,9 +43,9 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
-          <Box pb={20}>
+          {/* <Box pb={20}>
             <Navbar />
-          </Box>
+          </Box> */}
           {children}
           <Footer />
         </Provider>
