@@ -8,6 +8,8 @@ import FileHistoryIcon from "@/components/icons/file-history";
 import GlobeIcon from "@/components/icons/globe";
 import PresentationIcon from "@/components/icons/presentation";
 import QuestionaireIcon from "@/components/icons/questionnaire";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const tutorTrainingProgram = [
   {
@@ -43,8 +45,9 @@ const tutorTrainingProgram = [
 function About() {
   return (
     <>
-      <Box as="section" pb={[10, null, null, 20]} fontSize="lg">
-        <Container>
+      <Box as="section" pb={[10, null, null, 20]} fontSize="lg" bg=" #F7DC6F">
+      <Navbar />
+        <Container pt={20}>
           <SimpleGrid columns={[1, null, null, 2]} gap={8} mb={40}>
             <Box pos="relative" aspectRatio="portrait">
               <Image src={placeholderImage} alt="" fill />
@@ -168,28 +171,28 @@ function About() {
               details={[
                 "We focus not just on technical skills but also on soft skills, cultural sensitivity, and classroom management to make you a well-rounded educator.",
               ]}
-              icon={<PresentationIcon w="80px" color="skyblue" />}
+              icon={<PresentationIcon w="80px" color=" #000000" />}
             />
             <InfoCard
               title="Global Reach"
               details={[
                 "Our international network ensures that you’ll find opportunities to teach and connect with students across the world.",
               ]}
-              icon={<GlobeIcon w="80px" color="skyblue" />}
+              icon={<GlobeIcon w="80px" color=" #000000" />}
             />
             <InfoCard
               title="End-to-End Support"
               details={[
                 "From training to placement, we’re with you every step of the way, ensuring your success as a tutor.",
               ]}
-              icon={<QuestionaireIcon w="80px" color="skyblue" />}
+              icon={<QuestionaireIcon w="80px" color=" #000000" />}
             />
             <InfoCard
               title="Proven Track Record"
               details={[
                 "Our alumni have gone on to secure positions at top online schools, making a difference in the lives of their students.",
               ]}
-              icon={<FileHistoryIcon w="80px" color="skyblue" />}
+              icon={<FileHistoryIcon w="80px" color=" #000000" />}
             />
           </SimpleGrid>
 
@@ -201,6 +204,12 @@ function About() {
             mx="auto"
             mb={40}
             lineHeight={1.5}
+            p={10}
+            fontWeight="400"
+            fontStyle="italic"
+            borderRadius={14}
+            bg=" #1A5276"
+            color=" #ffffff"
           >
             At Prouda Tutors, we don’t just train teachers; we build careers and
             transform lives. Join us today, and let’s shape the future of online
@@ -260,6 +269,8 @@ function About() {
           </Heading>
         </Container>
       </Box>
+
+      <Footer bg=" #F7DC6F" mt={0} />
     </>
   );
 }

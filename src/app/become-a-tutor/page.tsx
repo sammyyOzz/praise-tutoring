@@ -1,9 +1,11 @@
+import Footer from "@/components/footer";
 import FeedbackIcon from "@/components/icons/feedback";
 import FocusIcon from "@/components/icons/focus";
 import PresentationIcon from "@/components/icons/presentation";
 import QuestionaireIcon from "@/components/icons/questionnaire";
 import UserSettingsIcon from "@/components/icons/user-settings";
 import InfoCard from "@/components/info-card";
+import Navbar from "@/components/navbar";
 import Container from "@/components/ui/container";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
@@ -15,7 +17,7 @@ const trainingProgramDetails = [
       "Gain a strong foundation in English language teaching with practical lessons.",
       "Receive guidance on creating engaging and effective lesson plans tailored to various student needs.",
     ],
-    icon: <PresentationIcon w="80px" color="skyblue" />
+    icon: <PresentationIcon w="80px" color=" #000000" />,
   },
   {
     title: "Certification and CV Preparation",
@@ -37,7 +39,7 @@ const trainingProgramDetails = [
       "Specialized training to teach children, teens, adults, or business professionals.",
       "Understand frameworks like CEFR to align with school expectations.",
     ],
-    icon: <FocusIcon w="80px" color="skyblue" />
+    icon: <FocusIcon w="80px" color=" #000000" />,
   },
   {
     title: "Personalized Coaching",
@@ -52,7 +54,7 @@ const trainingProgramDetails = [
       "Recommendations for affordable and high-quality equipment like headsets, webcams, and internet packages.",
       "Tips on creating a professional and welcoming teaching environment.",
     ],
-    icon: <UserSettingsIcon w="80px" color="skyblue" />
+    icon: <UserSettingsIcon w="80px" color=" #000000" />,
   },
   {
     title: "Mock Interviews and Feedback",
@@ -60,7 +62,7 @@ const trainingProgramDetails = [
       "Practice sessions to build confidence and polish your presentation for school applications.",
       "Constructive feedback to refine your approach and make a lasting impression.",
     ],
-    icon: <FeedbackIcon w="80px" color="skyblue" />
+    icon: <FeedbackIcon w="80px" color=" #000000" />,
   },
   {
     title: "Exclusive Job Assistance",
@@ -75,15 +77,16 @@ const trainingProgramDetails = [
       "Access to a community of experienced tutors for advice and collaboration.",
       "Continued resources and updates on industry trends to stay ahead.",
     ],
-    icon: <QuestionaireIcon w="80px" color="skyblue" />
+    icon: <QuestionaireIcon w="80px" color=" #000000" />,
   },
 ];
 
 function BecomeATutor() {
   return (
     <>
-      <Box as="section" pb={[10, null, null, 20]}>
-        <Container textAlign="center">
+      <Box as="section" pb={[20, null, null, 20]}>
+        <Navbar />
+        <Container textAlign="center" pt={20}>
           <Heading
             as="h1"
             fontSize={["2xl", null, null, "5xl"]}
@@ -114,9 +117,22 @@ function BecomeATutor() {
             p={0}
             fontSize={["md", null, null, "xl"]}
           >
-            <SimpleGrid columns={[1, null, 2, null, 3]} gap={8}>
+            <SimpleGrid
+              columns={[1, null, 2, null, 3]}
+              gap={8}
+              p={16}
+              // bg=" #1A5276"
+              bg=" #F7DC6F"
+              // color=" #ffffff"
+              borderRadius={5}
+            >
               {trainingProgramDetails.map((item, i) => (
-                <InfoCard key={i} title={item.title} details={item.details} icon={item?.icon} />
+                <InfoCard
+                  key={i}
+                  title={item.title}
+                  details={item.details}
+                  icon={item?.icon}
+                />
               ))}
             </SimpleGrid>
             {/* {trainingProgramDetails.map((item, i) => (
@@ -146,6 +162,8 @@ function BecomeATutor() {
           </Container>
         </Container>
       </Box>
+
+      <Footer bg=" #F7DC6F" mt={0} />
     </>
   );
 }

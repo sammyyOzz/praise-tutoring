@@ -1,4 +1,6 @@
 import FaqCard from "@/components/faq-card";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import Container from "@/components/ui/container";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 
@@ -54,7 +56,8 @@ function Faqs() {
   return (
     <>
       <Box as="section" pb={[10, null, null, 20]} fontSize="lg">
-        <Container textAlign="center">
+      <Navbar />
+        <Container textAlign="center" pt={20}>
           <Heading
             as="h1"
             fontSize={["2xl", null, null, "5xl"]}
@@ -85,6 +88,7 @@ function Faqs() {
           </SimpleGrid>
         </Container>
       </Box>
+      <Footer />
     </>
   );
 }

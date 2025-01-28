@@ -5,9 +5,9 @@ import Socials from "./socials";
 import Container from "./ui/container";
 import { routes } from "@/routes";
 
-function Footer() {
+function Footer({ ...props }) {
   return (
-    <Box as="footer" mt={40} pb={20}>
+    <Box as="footer" mt={40} pb={20} {...props}>
       <Container>
         <Box as="hr" borderBlock="1px solid #b9b8b8" mb={8} />
         <Flex justify="space-between">

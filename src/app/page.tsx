@@ -1,7 +1,6 @@
 import Container from "@/components/ui/container";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import placeholderImage from "@/assets/images/placeholder.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ListItem from "@/components/ui/list-item";
@@ -17,14 +16,19 @@ import testimonialImage5 from "@/assets/images/testimonial-5.jpeg"
 import testimonialImage6 from "@/assets/images/testimonial-6.jpeg"
 import testimonialImage7 from "@/assets/images/testimonial-7.jpeg"
 import testimonialImage8 from "@/assets/images/testimonial-8.jpeg"
+import Footer from "@/components/footer";
 
 const whatYouWillLearnList = [
   "Introduction to Online tutoring.",
   "Skills You Need to Succeed as an Online Tutor",
   "How to Secure Your First Tutoring Job (My Blueprints).",
 ];
+
 // #F7DC6F LIGHT YELLOW
 //  #D4AC0D DARK YELLOW
+//  #1A5276 DARK BLUE
+//  #2980B9 MEDIUM BLUE
+//  #85C1E9 LIGHT BLUE
 
 const testimonials = [
   { image: testimonialImage1, name: "Teacher Hannah", description: `I highly recommend Chimy for her amazing help and support. She assisted me in finding my online ESL teaching job and connected me with a great ESL school.
@@ -203,13 +207,10 @@ export default function Home() {
         <Box>
           <ImageSlider>
             {testimonials.map((item, i) => (
-              <TestimonialCard key={i} image={item.image} name={item.name} description={item.description} />
+              <TestimonialCard key={i} image={item.image} name={item.name} description={item.description} video={item?.video} />
             ))}
           </ImageSlider>
         </Box>
-        {/* <Box>
-          <ImageSlider images={Array(5).fill(placeholderImage)} rtl />
-        </Box> */}
         </Container>
       </Box>
 
@@ -268,6 +269,8 @@ export default function Home() {
       </Link>
         </Container>
       </Box>
+
+      <Footer />
     </>
   );
 }
