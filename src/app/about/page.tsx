@@ -3,13 +3,14 @@ import Container from "@/components/ui/container";
 import ListItem from "@/components/ui/list-item";
 import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import placeholderImage from "@/assets/images/placeholder.png";
 import FileHistoryIcon from "@/components/icons/file-history";
 import GlobeIcon from "@/components/icons/globe";
 import PresentationIcon from "@/components/icons/presentation";
 import QuestionaireIcon from "@/components/icons/questionnaire";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import founderImage from "@/assets/images/founder.jpeg";
+import whatWeDoImage from "@/assets/images/what-we-do.jpeg";
 
 const tutorTrainingProgram = [
   {
@@ -48,9 +49,9 @@ function About() {
       <Box as="section" pb={[10, null, null, 20]} fontSize="lg" bg=" #F7DC6F">
       <Navbar />
         <Container pt={20}>
-          <SimpleGrid columns={[1, null, null, 2]} gap={8} mb={40}>
-            <Box pos="relative" aspectRatio="portrait">
-              <Image src={placeholderImage} alt="" fill />
+          <SimpleGrid columns={[1, null, null, 2]} gap={8} mb={40} alignItems="center">
+            <Box pos="relative" aspectRatio="square">
+              <Image src={whatWeDoImage} alt="" fill />
             </Box>
 
             <Box>
@@ -99,7 +100,37 @@ function About() {
             </Box>
           </SimpleGrid>
 
-          <SimpleGrid
+          <Box textAlign="center" mb={40}>
+              <Heading
+                fontSize={["2xl", null, null, "5xl"]}
+                mb={3}
+                lineHeight={1.5}
+              >
+                Our Mission
+              </Heading>
+              <Text fontSize={["md", null, null, "xl"]} mb={5} maxW={["100%", null, null, "50%"]} mx="auto">
+                To inspire, train, and connect aspiring online English tutors
+                with life-changing opportunities worldwide, fostering excellence
+                in online education.
+              </Text>
+            </Box>
+
+            <Box textAlign="center" mb={40}>
+              <Heading
+                fontSize={["2xl", null, null, "5xl"]}
+                mb={3}
+                lineHeight={1.5}
+              >
+                Our Vision
+              </Heading>
+              <Text fontSize={["md", null, null, "xl"]} mb={5} maxW={["100%", null, null, "50%"]} mx="auto">
+              To become the leading global hub for online English tutor
+                training and placement, empowering educators to create impactful
+                and inclusive learning experiences that transcend borders.
+              </Text>
+            </Box>
+
+          {/* <SimpleGrid
             columns={[1, null, null, 2]}
             gap={8}
             alignItems="center"
@@ -123,9 +154,9 @@ function About() {
             <Box pos="relative" aspectRatio="landscape">
               <Image src={placeholderImage} alt="" fill />
             </Box>
-          </SimpleGrid>
+          </SimpleGrid> */}
 
-          <SimpleGrid
+          {/* <SimpleGrid
             columns={[1, null, null, 2]}
             gap={8}
             alignItems="center"
@@ -149,7 +180,7 @@ function About() {
                 and inclusive learning experiences that transcend borders.
               </Text>
             </Box>
-          </SimpleGrid>
+          </SimpleGrid> */}
 
           <Heading
             fontSize={["2xl", null, null, "5xl"]}
@@ -228,7 +259,7 @@ function About() {
           <Flex justify="center" mb={6}>
             <Box w="200px" h="200px" pos="relative">
               <Image
-                src={placeholderImage}
+                src={founderImage}
                 alt="Chimy Praise"
                 fill
                 className="rounded"
