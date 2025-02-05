@@ -17,6 +17,7 @@ import testimonialImage6 from "@/assets/images/testimonial-6.jpeg"
 import testimonialImage7 from "@/assets/images/testimonial-7.jpeg"
 import testimonialImage8 from "@/assets/images/testimonial-8.jpeg"
 import Footer from "@/components/footer";
+import BeginHere from "@/components/begin-here";
 
 const whatYouWillLearnList = [
   "Introduction to Online tutoring.",
@@ -90,19 +91,7 @@ export default function Home() {
             🚀
           </Text>
 
-          <Link href={"#"}>
-            <Button
-              as={Box}
-              variant="solid"
-              color="#ffffff"
-              fontSize="lg"
-              fontWeight="bold"
-              px={12}
-              py={6}
-            >
-              Begin here
-            </Button>
-          </Link>
+          <BeginHere buttonText="Begin here" />
         </Container>
       </Box>
 
@@ -232,19 +221,7 @@ export default function Home() {
         For Aspiring Tutors
       </Heading>
 
-      <Link href={"#"}>
-        <Button
-          as={Box}
-          variant="solid"
-          color="#ffffff"
-          fontSize="lg"
-          fontWeight="bold"
-          px={12}
-          py={6}
-        >
-          Sign up for <strong>FREE</strong>
-        </Button>
-      </Link>
+      <BeginHere buttonText={<>Sign up for <strong>FREE</strong></>} />      
 
       <Heading as="h3" mt={20} mb={5}>
         Receive weekly expert tips to help you become a better tutor.
