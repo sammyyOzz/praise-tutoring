@@ -2,22 +2,20 @@ import Container from "@/components/ui/container";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import ListItem from "@/components/ui/list-item";
 import ImageSlider from "@/components/image-slider";
 import Navbar from "@/components/navbar";
-import feelingStuckImage from "@/assets/images/feeling-stuck.jpeg"
+import feelingStuckImage from "@/assets/images/feeling-stuck.jpeg";
 import TestimonialCard from "@/components/testimonial-card";
-import testimonialImage1 from "@/assets/images/testimonial-1.jpeg"
-import testimonialImage2 from "@/assets/images/testimonial-2.jpeg"
-import testimonialImage3 from "@/assets/images/testimonial-3.jpeg"
-import testimonialImage4 from "@/assets/images/testimonial-4.jpeg"
-import testimonialImage5 from "@/assets/images/testimonial-5.jpeg"
-import testimonialImage6 from "@/assets/images/testimonial-6.jpeg"
-import testimonialImage7 from "@/assets/images/testimonial-7.jpeg"
-import testimonialImage8 from "@/assets/images/testimonial-8.jpeg"
+import testimonialImage1 from "@/assets/images/testimonial-1.jpeg";
+import testimonialImage2 from "@/assets/images/testimonial-2.jpeg";
+import testimonialImage3 from "@/assets/images/testimonial-3.jpeg";
+import testimonialImage4 from "@/assets/images/testimonial-4.jpeg";
+import testimonialImage5 from "@/assets/images/testimonial-5.jpeg";
+import testimonialImage6 from "@/assets/images/testimonial-6.jpeg";
+import testimonialImage7 from "@/assets/images/testimonial-7.jpeg";
+import testimonialImage8 from "@/assets/images/testimonial-8.jpeg";
 import Footer from "@/components/footer";
-import BeginHere from "@/components/begin-here";
 
 const whatYouWillLearnList = [
   "Introduction to Online tutoring.",
@@ -32,21 +30,54 @@ const whatYouWillLearnList = [
 //  #85C1E9 LIGHT BLUE
 
 const testimonials = [
-  { image: testimonialImage1, name: "Teacher Hannah", description: `I highly recommend Chimy for her amazing help and support. She assisted me in finding my online ESL teaching job and connected me with a great ESL school.
+  {
+    image: testimonialImage1,
+    name: "Teacher Hannah",
+    description: `I highly recommend Chimy for her amazing help and support. She assisted me in finding my online ESL teaching job and connected me with a great ESL school.
 Chimy was always available to answer my questions, no matter the time.
 
 Once I had secured the job my life has changed, and I couldn't have done it without her.
-I strongly recommend Chimy to anyone needing guidance and support with  ESL teaching.` },
-  { image: testimonialImage2, name: "Teacher Faith", description: `The training was so easy and fun as well. The most interesting part was getting my first job as an ESL Tutor in less than a week after going through the training. It was really worth it.` },
-  { image: testimonialImage3, name: "Teacher Ehis", description: `Receiving ESL training from Teacher Chimy 
+I strongly recommend Chimy to anyone needing guidance and support with  ESL teaching.`,
+  },
+  {
+    image: testimonialImage2,
+    name: "Teacher Faith",
+    description: `The training was so easy and fun as well. The most interesting part was getting my first job as an ESL Tutor in less than a week after going through the training. It was really worth it.`,
+  },
+  {
+    image: testimonialImage3,
+    name: "Teacher Ehis",
+    description: `Receiving ESL training from Teacher Chimy 
  gave me the game-changing experience on my journey to becoming a successful ESL teacher. Her exceptional ability to break down complex concepts and encouragement gave me the confidence and skills I needed to excel. 
-I also understood the importance of personal effort. I dedicated time to refine my skills and with this, I secured an ESL teaching job.` },
-  { image: testimonialImage4, name: "Teacher Zubbi", description: `In 2023, Chimy introduced me to ESL teaching, and it completely transformed my life. With her guidance, I secured my first ESL job and discovered both the joy of teaching and the consistent demand for ESL instruction.` },
-  { image: testimonialImage5, name: "Teacher Jay", description: `I wish to thank Chimy for always answering my calls and giving solutions to my career need. I’m in Happy English because of Chimy. God bless you abundantly with every need you desire. I’m so glad I met you.` },
-  { image: testimonialImage6, name: "Teacher Phey", description: `Hi, Chimy! I just want to thank you for the training and mentorship you provided me. The teaching tips you also availed me helped me land a good teaching job, and it’s been a smooth ride so far.` },
-  { image: testimonialImage7, name: "Teacher Ibi", description: `The outcome of Chimy’s mentorship has been nothing short of remarkable. With her guidance, I landed my first job as an online teacher for Learners Worldwide.` },
-  { image: testimonialImage8, name: "Teacher Lola", description: "", video: "https://youtube.com/shorts/p1tnx-kkK4c?feature=share" },
-]
+I also understood the importance of personal effort. I dedicated time to refine my skills and with this, I secured an ESL teaching job.`,
+  },
+  {
+    image: testimonialImage4,
+    name: "Teacher Zubbi",
+    description: `In 2023, Chimy introduced me to ESL teaching, and it completely transformed my life. With her guidance, I secured my first ESL job and discovered both the joy of teaching and the consistent demand for ESL instruction.`,
+  },
+  {
+    image: testimonialImage5,
+    name: "Teacher Jay",
+    description: `I wish to thank Chimy for always answering my calls and giving solutions to my career need. I’m in Happy English because of Chimy. God bless you abundantly with every need you desire. I’m so glad I met you.`,
+  },
+  {
+    image: testimonialImage6,
+    name: "Teacher Phey",
+    description: `Hi, Chimy! I just want to thank you for the training and mentorship you provided me. The teaching tips you also availed me helped me land a good teaching job, and it’s been a smooth ride so far.`,
+  },
+  {
+    image: testimonialImage7,
+    name: "Teacher Ibi",
+    description: `The outcome of Chimy’s mentorship has been nothing short of remarkable. With her guidance, I landed my first job as an online teacher for Learners Worldwide.`,
+  },
+  {
+    image: testimonialImage8,
+    name: "Teacher Lola",
+    description: "",
+    video: "https://youtube.com/shorts/p1tnx-kkK4c?feature=share",
+  },
+];
 
 export default function Home() {
   return (
@@ -90,8 +121,19 @@ export default function Home() {
             paying over a million naira a month—let’s make that your story too!
             🚀
           </Text>
-
-          <BeginHere buttonText="Begin here" />
+          <a href="https://selar.co/776879" target="_blank">
+            <Button
+              as={Box}
+              variant="solid"
+              color="#ffffff"
+              fontSize="lg"
+              fontWeight="bold"
+              px={12}
+              py={6}
+            >
+              Begin here
+            </Button>
+          </a>
         </Container>
       </Box>
 
@@ -180,70 +222,88 @@ export default function Home() {
 
       <Box as="section" bg=" #F7DC6F" py={20}>
         <Container>
-        <Heading
-          as="h2"
-          fontSize={["2xl", null, null, "4xl"]}
-          maxW={["100%", null, null, "50%"]}
-          mx="auto"
-          mb={10}
-          lineHeight={1.5}
-        >
-          This is your chance to take control of your career and lifestyle!{" "}
-          <br />
-          Explore success stories from tutors we&apos;ve trained.
-        </Heading>
+          <Heading
+            as="h2"
+            fontSize={["2xl", null, null, "4xl"]}
+            maxW={["100%", null, null, "50%"]}
+            mx="auto"
+            mb={10}
+            lineHeight={1.5}
+          >
+            This is your chance to take control of your career and lifestyle!{" "}
+            <br />
+            Explore success stories from tutors we&apos;ve trained.
+          </Heading>
 
-        <Box>
-          <ImageSlider>
-            {testimonials.map((item, i) => (
-              <TestimonialCard key={i} image={item.image} name={item.name} description={item.description} video={item?.video} />
-            ))}
-          </ImageSlider>
-        </Box>
+          <Box>
+            <ImageSlider>
+              {testimonials.map((item, i) => (
+                <TestimonialCard
+                  key={i}
+                  image={item.image}
+                  name={item.name}
+                  description={item.description}
+                  video={item?.video}
+                />
+              ))}
+            </ImageSlider>
+          </Box>
         </Container>
       </Box>
 
       <Box as="section" pt={40} textAlign="center">
         <Container>
-        <Heading
-        as="h2"
-        fontSize={["2xl", null, null, "4xl"]}
-        maxW={["100%", null, null, "50%"]}
-        mx="auto"
-        mb={10}
-        lineHeight={1.5}
-      >
-        If you&apos;ve made it to this page and find yourself intrigued,
-        here&apos;s a special invitation for you...
-      </Heading>
+          <Heading
+            as="h2"
+            fontSize={["2xl", null, null, "4xl"]}
+            maxW={["100%", null, null, "50%"]}
+            mx="auto"
+            mb={10}
+            lineHeight={1.5}
+          >
+            If you&apos;ve made it to this page and find yourself intrigued,
+            here&apos;s a special invitation for you...
+          </Heading>
 
-      <Heading as="h3" mb={5}>
-        For Aspiring Tutors
-      </Heading>
+          <Heading as="h3" mb={5}>
+            For Aspiring Tutors
+          </Heading>
 
-      <BeginHere buttonText={<>Sign up for <strong>FREE</strong></>} />      
+          <a href="https://prouda-tutors.kit.com/539809c67c" target="_blank">
+            <Button
+              as={Box}
+              variant="solid"
+              color="#ffffff"
+              fontSize="lg"
+              fontWeight="bold"
+              px={12}
+              py={6}
+            >
+              Sign up for <strong>FREE</strong>
+            </Button>
+          </a>
 
-      <Heading as="h3" mt={20} mb={5}>
-        Receive weekly expert tips to help you become a better tutor.
-      </Heading>
-      <Text fontSize={["md", null, null, "xl"]} mb={7}>
-        I send a weekly newsletter with tips on improving as a teacher, along
-        with helpful videos, delivered straight to your email.
-      </Text>
+          <Heading as="h3" mt={20} mb={5}>
+            Receive weekly expert tips to help you become a better tutor.
+          </Heading>
+          <Text fontSize={["md", null, null, "xl"]} mb={7}>
+            I send a weekly newsletter with tips on improving as a teacher,
+            along with helpful videos, delivered straight to your email.
+          </Text>
 
-      <Link href={"#"}>
-        <Button
-          as={Box}
-          variant="solid"
-          color="#ffffff"
-          fontSize="lg"
-          fontWeight="bold"
-          px={12}
-          py={6}
-        >
-          Get <strong>FREE</strong> Newsletters
-        </Button>
-      </Link>
+          <a href="https://prouda-tutors.kit.com/7009afd506" target="_blank">
+            <Button
+              as={Box}
+              variant="solid"
+              color="#ffffff"
+              fontSize="lg"
+              fontWeight="bold"
+              px={12}
+              py={6}
+            >
+              Get <strong>FREE</strong> Newsletters
+            </Button>
+          </a>
         </Container>
       </Box>
 
