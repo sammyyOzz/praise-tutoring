@@ -121,7 +121,7 @@ export default function Home() {
             paying over a million naira a month—let’s make that your story too!
             🚀
           </Text>
-          <a href="https://selar.co/776879" target="_blank">
+          <a href="https://us06web.zoom.us/rec/share/8-DdmR_eCvrcuCFvJcLyag57qe9qGeFpAKKSq2mJ7VxUETs5pOiBlZ-n6hJRYC8.aok93xAM4xslB3dm" target="_blank">
             <Button
               as={Box}
               variant="solid"
@@ -171,13 +171,13 @@ export default function Home() {
           </Flex>
 
           <Flex direction={["column", null, null, "row"]} gap={10} mb={16}>
-            <Box w={["100%", null, null, "50%"]}>
+            <Box w={["100%", null, null, "35%"]}>
               <Box pos="relative" aspectRatio="1">
                 <Image src={feelingStuckImage} alt="" fill />
               </Box>
             </Box>
 
-            <Box w={["100%", null, null, "50%"]} textAlign="left">
+            <Box w={["100%", null, null, "65%"]} textAlign="left">
               <Heading
                 as="h2"
                 fontSize={["2xl", null, null, "4xl"]}
@@ -269,7 +269,7 @@ export default function Home() {
             For Aspiring Tutors
           </Heading>
 
-          <a href="https://prouda-tutors.kit.com/539809c67c" target="_blank">
+          <a href="https://chat.whatsapp.com/BY6cQMBXj9h8n0i58hAwTc" target="_blank">
             <Button
               as={Box}
               variant="solid"
@@ -283,7 +283,7 @@ export default function Home() {
             </Button>
           </a>
 
-          <Heading as="h3" mt={20} mb={5}>
+          {/* <Heading as="h3" mt={20} mb={5}>
             Receive weekly expert tips to help you become a better tutor.
           </Heading>
           <Text fontSize={["md", null, null, "xl"]} mb={7}>
@@ -303,7 +303,7 @@ export default function Home() {
             >
               Get <strong>FREE</strong> Newsletters
             </Button>
-          </a>
+          </a> */}
         </Container>
       </Box>
 
