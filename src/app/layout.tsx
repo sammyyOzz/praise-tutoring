@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
+import logoYellow from "@/app/images/logo-yellow.png";
+import logoWhite from "@/app/images/logo-white.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,17 +20,36 @@ export const metadata: Metadata = {
   description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
   keywords: ["prouda", "tutors", "tutoring", "online", "aspiring", "tutor"],
   robots: {
-    index: true,  // Ensuring the page is indexed
+    index: true,  
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true,  // Optional based on your content strategy
+      noimageindex: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  // Recommended additional metadata
+  metadataBase: new URL('https://proudatutors.com'), // Important for canonical URLs
+  alternates: {
+    canonical: '/', // Recommended for avoiding duplicate content
+  },
+  openGraph: {
+    title: "Prouda Tutors: Become an online tutor",
+    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    type: 'website',
+    // Add your actual Open Graph image URL
+    images: [logoYellow.src], 
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Prouda Tutors: Become an online tutor",
+    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    // Add your Twitter image URL
+    images: [logoWhite.src],
   },
 };
 
