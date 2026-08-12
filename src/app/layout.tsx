@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prouda Tutors: Become an online tutor",
-  description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
-  keywords: ["prouda", "tutors", "tutoring", "online", "aspiring", "tutor"],
+  title: "Prouda Tutors: Teach English Online & Get Hired Globally",
+  description: "The Blueprint: the step-by-step programme that takes African tutors from complete beginner to hired by international online teaching companies.",
+  keywords: ["prouda", "tutors", "ESL", "online teaching", "TEFL", "teach English online", "get hired online"],
   robots: {
-    index: true,  
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
     canonical: '/', // Recommended for avoiding duplicate content
   },
   openGraph: {
-    title: "Prouda Tutors: Become an online tutor",
-    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    title: "Prouda Tutors: Teach English Online & Get Hired Globally",
+    description: "The Blueprint: the step-by-step programme that takes African tutors from complete beginner to hired by international online teaching companies.",
     type: 'website',
     // Add your actual Open Graph image URL
-    images: [logoYellow.src], 
+    images: [logoYellow.src],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Prouda Tutors: Become an online tutor",
-    description: "Prouda: Kickstart, grow and thrive in your tutoring business!",
+    title: "Prouda Tutors: Teach English Online & Get Hired Globally",
+    description: "The Blueprint: the step-by-step programme that takes African tutors from complete beginner to hired by international online teaching companies.",
     // Add your Twitter image URL
     images: [logoWhite.src],
   },

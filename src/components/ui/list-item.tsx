@@ -3,7 +3,7 @@ import blueTick from "@/assets/icons/blue-tick.svg";
 
 interface ListItemProps {
   children: React.ReactNode;
-
+  [anyProp: string]: unknown;
 }
 
 function ListItem({ children, ...props }: ListItemProps) {
