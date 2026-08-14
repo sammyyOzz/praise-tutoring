@@ -15,10 +15,11 @@ interface MediaBlockProps {
   alt?: string;
   type?: "image" | "video";
   aspectRatio?: number | string;
+  poster?: string;
   [key: string]: unknown;
 }
 
-function MediaBlock({ src, alt = "", type = "image", aspectRatio, ...props }: MediaBlockProps) {
+function MediaBlock({ src, alt = "", type = "image", aspectRatio, poster, ...props }: MediaBlockProps) {
   if (type === "video") {
     return (
       <Box
@@ -31,6 +32,7 @@ function MediaBlock({ src, alt = "", type = "image", aspectRatio, ...props }: Me
       >
         <video
           src={src}
+          poster={poster}
           controls
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}

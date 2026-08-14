@@ -157,13 +157,46 @@ const proofStats = [
   { value: "China · Vietnam · Japan +", label: "Countries our tutors now teach in" },
 ];
 
-const proofMedia: { label: string; type: "image" | "video"; src: string }[] = [
-  { label: "Testimonial video 1", type: "video", src: "/sect9/testimonial-video-1.mp4" },
+const proofMedia: { label: string; type: "image" | "video"; src: string; poster?: string }[] = [
+  {
+    label: "Testimonial video 1",
+    type: "video",
+    src: "/sect9/testimonial-video-1.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-1_thumb_0m01s.jpg",
+  },
   { label: "Offer letter screenshot", type: "image", src: "/sect9/offer-letter-screenshot-1.jpeg" },
+  {
+    label: "Testimonial video 2",
+    type: "video",
+    src: "/sect9/testimonial-video-2.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-2_thumb_0m00s.jpg",
+  },
   { label: "WhatsApp screenshot 1", type: "image", src: "/sect9/whatsapp-screenshot-1.jpeg" },
-  { label: "Testimonial video 2", type: "video", src: "/sect9/testimonial-video-2.mp4" },
+  {
+    label: "Testimonial video 3",
+    type: "video",
+    src: "/sect9/testimonial-video-3.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-3_thumb_0m00s.jpg",
+  },
   { label: "WhatsApp screenshot 2", type: "image", src: "/sect9/whatsapp-screenshot-2.jpeg" },
-  { label: "Testimonial video 3", type: "video", src: "/sect9/testimonial-video-3.mp4" },
+  {
+    label: "Testimonial video 4",
+    type: "video",
+    src: "/sect9/testimonial-video-4.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-4_thumb_0m00s.jpg",
+  },
+  {
+    label: "Testimonial video 5",
+    type: "video",
+    src: "/sect9/testimonial-video-5.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-5_thumb_0m00s.jpg",
+  },
+  {
+    label: "Testimonial video 6",
+    type: "video",
+    src: "/sect9/testimonial-video-6.mp4",
+    poster: "/sect9/thumbnails/testimonial-video-6_thumb_0m02s.jpg",
+  },
 ];
 
 const faqs = [
@@ -408,7 +441,12 @@ export default function Home() {
           </Reveal>
 
           <Box maxW="600px" mx="auto">
-            <MediaBlock src="/sect2/credibility-testimonial-video.mp4" type="video" aspectRatio={16 / 9} />
+            <MediaBlock
+              src="/sect2/credibility-testimonial-video.mp4"
+              type="video"
+              aspectRatio={16 / 9}
+              poster="/sect2/thumbnails/credibility-testimonial-video_thumb_0m00s.jpg"
+            />
           </Box>
         </Container>
       </Box>
@@ -674,7 +712,12 @@ export default function Home() {
           </Reveal>
 
           <Box maxW="600px" mx="auto" mb={10}>
-            <MediaBlock src="/sect5/transformation-testimonial-video.mp4" type="video" aspectRatio={16 / 9} />
+            <MediaBlock
+              src="/sect5/transformation-testimonial-video.mp4"
+              type="video"
+              aspectRatio={16 / 9}
+              poster="/sect5/thumbnails/transformation-testimonial-video_thumb_0m01s.jpg"
+            />
           </Box>
 
           <Flex justify="center">
@@ -859,6 +902,7 @@ export default function Home() {
                   alt={item.label}
                   type={item.type}
                   aspectRatio={item.type === "video" ? 16 / 9 : 9 / 16}
+                  poster={item.poster}
                 />
               </Reveal>
             ))}
