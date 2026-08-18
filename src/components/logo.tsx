@@ -11,6 +11,7 @@ function Logo({ ...props }) {
         justify="center"
         align="center"
         pos="relative"
+        overflow="hidden"
         w="70px"
         h="70px"
         css={{

@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import logoYellow from "@/app/images/logo-yellow.png";
 import logoWhite from "@/app/images/logo-white.png";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bodyFont = Plus_Jakarta_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const accentFont = Fraunces({
+  variable: "--font-accent",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${bodyFont.variable} ${accentFont.variable}`}>
         <Provider>
           {children}
         </Provider>

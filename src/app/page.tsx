@@ -154,7 +154,11 @@ const bonuses = [
 const proofStats = [
   { value: "Hundreds", label: "African educators trained" },
   { value: "170+", label: "Placed in international teaching roles" },
-  { value: "China · Vietnam · Japan +", label: "Countries our tutors now teach in" },
+  {
+    value: "China, Japan, Vietnam, Mexico, Poland, Saudi Arabia, Indonesia, Egypt, Hong Kong, Peru, Italy and more",
+    label: "Countries our tutors now teach in",
+    valueFontSize: ["md", null, "xl"],
+  },
 ];
 
 const proofMedia: { label: string; type: "image" | "video"; src: string; poster?: string }[] = [
@@ -164,21 +168,18 @@ const proofMedia: { label: string; type: "image" | "video"; src: string; poster?
     src: "/sect9/testimonial-video-1.mp4",
     poster: "/sect9/thumbnails/testimonial-video-1_thumb_0m01s.jpg",
   },
-  { label: "Offer letter screenshot", type: "image", src: "/sect9/offer-letter-screenshot-1.jpeg" },
   {
     label: "Testimonial video 2",
     type: "video",
     src: "/sect9/testimonial-video-2.mp4",
     poster: "/sect9/thumbnails/testimonial-video-2_thumb_0m00s.jpg",
   },
-  { label: "WhatsApp screenshot 1", type: "image", src: "/sect9/whatsapp-screenshot-1.jpeg" },
   {
     label: "Testimonial video 3",
     type: "video",
     src: "/sect9/testimonial-video-3.mp4",
     poster: "/sect9/thumbnails/testimonial-video-3_thumb_0m00s.jpg",
   },
-  { label: "WhatsApp screenshot 2", type: "image", src: "/sect9/whatsapp-screenshot-2.jpeg" },
   {
     label: "Testimonial video 4",
     type: "video",
@@ -197,6 +198,9 @@ const proofMedia: { label: string; type: "image" | "video"; src: string; poster?
     src: "/sect9/testimonial-video-6.mp4",
     poster: "/sect9/thumbnails/testimonial-video-6_thumb_0m02s.jpg",
   },
+  { label: "WhatsApp screenshot 1", type: "image", src: "/sect9/whatsapp-screenshot-1.jpeg" },
+  { label: "WhatsApp screenshot 2", type: "image", src: "/sect9/whatsapp-screenshot-2.jpeg" },
+  { label: "Offer letter screenshot", type: "image", src: "/sect9/offer-letter-screenshot-1.jpeg" },
 ];
 
 const faqs = [
@@ -328,6 +332,8 @@ export default function Home() {
 
           <Heading
             as="h1"
+            fontFamily="var(--font-accent)"
+            fontWeight="600"
             fontSize={["3xl", null, null, "5xl"]}
             maxW={["100%", null, null, "80%"]}
             mx="auto"
@@ -397,7 +403,7 @@ export default function Home() {
       </Box>
 
       {/* SECTION 2: CREDIBILITY GAP */}
-      <Box as="section" bg="#ffffff" py={[16, null, 24]}>
+      <Box as="section" bg="rgba(133, 193, 233, 0.1)" py={[16, null, 24]}>
         <Container maxW="850px" textAlign="center">
           <Reveal>
             <Heading as="h2" fontSize={["2xl", null, "4xl"]} mb={8} lineHeight={1.4} color=" #1A5276">
@@ -419,10 +425,10 @@ export default function Home() {
 
           <Reveal delay={0.15}>
             <Box borderLeft="4px solid #2980B9" pl={6} py={2} mb={8} textAlign="left" maxW="500px" mx="auto">
-              <Text fontSize={["lg", null, "2xl"]} fontStyle="italic" mb={3} color=" #1A5276">
+              <Text fontFamily="var(--font-accent)" fontSize={["lg", null, "2xl"]} fontStyle="italic" mb={3} color=" #1A5276">
                 The first thing said, I could do that.
               </Text>
-              <Text fontSize={["lg", null, "2xl"]} fontStyle="italic" color="rgba(0,0,0,0.6)">
+              <Text fontFamily="var(--font-accent)" fontSize={["lg", null, "2xl"]} fontStyle="italic" color="rgba(0,0,0,0.6)">
                 {`The second thing said, but that kind of thing does not happen for people like me.`}
               </Text>
             </Box>
@@ -435,7 +441,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={0.25}>
-            <Heading as="h3" fontSize={["xl", null, "3xl"]} mb={10} color=" #D4AC0D">
+            <Heading as="h3" fontFamily="var(--font-accent)" fontSize={["xl", null, "3xl"]} mb={10} color=" #D4AC0D">
               What do they know that you do not?
             </Heading>
           </Reveal>
@@ -466,39 +472,23 @@ export default function Home() {
             gap={12}
             alignItems="start"
           >
-            <Box>
+            <Box minW={0}>
               <Reveal>
-                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8}>
-                  {`My name is Praise Chimy Onaga, and I am the founder of Prouda Tutors.`}
+                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8} textAlign="justify">
+                  {`My name is Praise Chimy Onaga, founder of Prouda Tutors, which stands for Proud Africans. My mission is to help Africans access global opportunities, earn internationally, and build careers without leaving home or apologising for where they come from.`}
                 </Text>
               </Reveal>
               <Reveal delay={0.05}>
-                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8}>
-                  {`Prouda stands for Proud Africans. That name is not decoration. It is the entire mission in two words: Africans, earning globally, without leaving home, and without apologising for where they come from.`}
-                </Text>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8}>
-                  {`I discovered international online teaching through a friend. At the time I was a Social Media Manager. Months later, I got fired and I had no choice than to focus on online teaching. I will be honest with you: nobody handed me a map. I figured this industry out the hard way. The confusing videos, the conflicting advice, the applications that went nowhere. I sat in interviews with international schools and learned, question by question, what they were actually looking for.`}
-                </Text>
-              </Reveal>
-              <Reveal delay={0.15}>
-                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8}>
-                  {`I learned that they would ask about my internet before they asked about my passion, so I started sending my speed test results before they could even ask. I learned that a demo class is scored, not only watched. I learned the difference between applying and applying strategically.`}
-                </Text>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <Text fontSize={["md", null, "xl"]} mb={5} lineHeight={1.8}>
-                  {`And then something happened that changed the direction of my whole life: I earned six successful interview outcomes across five countries and four continents, all within the same time frame. But the real turning point wasn't my own success. It was the first time I helped someone else get hired. Watching that happen did something to me. Because I realised the gap between the people who make it and the people who give up was never talent, or accent, or passport. It was information. Somebody either shows you how this industry works, or you wander in it until you quit.`}
-                </Text>
-              </Reveal>
-              <Reveal delay={0.25}>
-                <Text fontSize={["md", null, "xl"]} mb={8} lineHeight={1.8}>
-                  {`Since then, Prouda Tutors has trained hundreds of African educators across Nigeria, Ghana, Kenya, South Africa, Benin and Cameroon, and over 170 of them have gone on to secure international online teaching opportunities, teaching students in multiple countries.`}
+                <Text fontSize={["md", null, "xl"]} mb={8} lineHeight={1.8} textAlign="justify">
+                  {`A friend introduced me to international online teaching. After I lost my job as a Social Media Manager, I taught myself the industry and landed six interview offers across five countries and four continents. That taught me the real barrier for African educators was never talent, it was access to the right information, so I built Prouda Tutors. We have since trained hundreds of educators across `}
+                  <Text as="span" fontWeight="bold">
+                    {`Nigeria, Ghana, Kenya, South Africa, Benin, and Cameroon, with over 170`}
+                  </Text>
+                  {` securing international online teaching opportunities.`}
                 </Text>
               </Reveal>
 
-              <Reveal delay={0.3}>
+              <Reveal delay={0.2}>
                 <Box as="ul" listStylePosition="outside" mb={6}>
                   {founderHighlights.map((item) => (
                     <ListItem key={item} mb={3}>
@@ -508,10 +498,11 @@ export default function Home() {
                 </Box>
               </Reveal>
 
-              <Reveal delay={0.35}>
+              <Reveal delay={0.25}>
                 <Text
+                  fontFamily="var(--font-accent)"
                   fontSize={["lg", null, "2xl"]}
-                  fontWeight="bold"
+                  fontWeight="600"
                   color=" #1A5276"
                   mb={10}
                   lineHeight={1.6}
@@ -548,7 +539,7 @@ export default function Home() {
       </Box>
 
       {/* SECTION 4: THE REAL REASON PEOPLE DO NOT GET HIRED */}
-      <Box as="section" bg="#ffffff" py={[16, null, 24]}>
+      <Box as="section" bg="rgba(247, 220, 111, 0.12)" py={[16, null, 24]}>
         <Container maxW="900px">
           <Reveal>
             <Heading as="h2" fontSize={["2xl", null, "4xl"]} textAlign="center" mb={10} lineHeight={1.4} color=" #1A5276">
@@ -599,15 +590,16 @@ export default function Home() {
                 <Flex as="li" gap={4} align="flex-start" mb={5}>
                   <Flex
                     flexShrink={0}
-                    w="28px"
-                    h="28px"
+                    w="16px"
+                    h="16px"
                     borderRadius="50%"
-                    border="2px solid #1A5276"
+                    border="1px solid #1A5276"
                     align="center"
                     justify="center"
-                    fontSize="sm"
+                    fontSize="10px"
                     fontWeight="bold"
                     color=" #1A5276"
+                    mt={1.5}
                   >
                     ×
                   </Flex>
@@ -727,7 +719,7 @@ export default function Home() {
       </Box>
 
       {/* SECTION 6: INSIDE THE PROGRAMME */}
-      <Box as="section" bg="#ffffff" py={[16, null, 24]}>
+      <Box as="section" bg="rgba(133, 193, 233, 0.1)" py={[16, null, 24]}>
         <Container>
           <Reveal>
             <Flex justify="center" mb={3}>
@@ -852,7 +844,7 @@ export default function Home() {
       </Box>
 
       {/* SECTION 9: PROOF */}
-      <Box as="section" bg="#ffffff" pt={[16, null, 24]}>
+      <Box as="section" bg="rgba(247, 220, 111, 0.12)" pt={[16, null, 24]}>
         <Container maxW="1000px" textAlign="center">
           <Reveal>
             <Heading as="h2" fontSize={["2xl", null, "4xl"]} mb={6} lineHeight={1.4} color=" #1A5276">
@@ -881,7 +873,12 @@ export default function Home() {
             <SimpleGrid columns={[1, null, 3]} gap={8}>
               {proofStats.map((stat) => (
                 <Box key={stat.label} textAlign="center">
-                  <Text fontSize={["2xl", null, "4xl"]} fontWeight="bold" color="#ffffff" mb={1}>
+                  <Text
+                    fontSize={stat.valueFontSize ?? ["2xl", null, "4xl"]}
+                    fontWeight="bold"
+                    color="#ffffff"
+                    mb={1}
+                  >
                     {stat.value}
                   </Text>
                   <Text fontSize="sm" color="rgba(255,255,255,0.75)">
@@ -894,9 +891,9 @@ export default function Home() {
         </Box>
 
         <Container maxW="1100px">
-          <SimpleGrid columns={[2, null, 4]} gap={5} mb={16}>
+          <SimpleGrid columns={[1, 2, 3]} gap={5} mb={16}>
             {proofMedia.map((item, i) => (
-              <Reveal key={item.label} delay={(i % 4) * 0.05}>
+              <Reveal key={item.label} delay={(i % 3) * 0.05}>
                 <MediaBlock
                   src={item.src}
                   alt={item.label}
